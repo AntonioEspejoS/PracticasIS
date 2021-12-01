@@ -25,16 +25,35 @@ int main()
 	   }
    }while(sesionIniciada==false);
    if(usuarioSesion.getTipoUsu()==0){
-	cout<<"Hola usuario normal\n";
+        cout<<"Hola usuario normal\n";
    }else if(usuarioSesion.getTipoUsu()==1){
-	cout<<"Hola usuario administrador\n";
+    int opcionMenuAdminUsu=0;
+    do{   
+            AdministradorUsuario AdminUsu(usuarioSesion.getId(),usuarioSesion.getNombre(),usuarioSesion.getContra(), usuarioSesion.getCorreo());
+            
+        	cout<<"--------------------------------------------\n";
+            cout<<"Bienvenido administrador de usuarios ";
+            cout<< AdminUsu.getNombre();
+            cout<<"\n";
+        	do{
+            	cout<<"--------------MENU--------------\n";
+            	cout<<"1.-Crear usuario\n";
+            	cout<<"2.-Salir\n";
+            	cout<<"Elige una opcion:\n";
+            	cin>>opcionMenuAdminUsu;
+            	if(opcionMenuAdminUsu<1 || opcionMenuAdminUsu>2){
+            	  cout<<"Opcion invalida\n";  
+            	}
+        	}while(opcionMenuAdminUsu<1 || opcionMenuAdminUsu>2);
+        	if(opcionMenuAdminUsu==1){
+        	    cout<<"----Crear usuario----\n";
+        	    AdminUsu.crearUsuario();
+        	}else if(opcionMenuAdminUsu==2){
+        	    cout<<"Hasta pronto\n";
+        	}
+       }while(opcionMenuAdminUsu!=2);
    }
 
 
-/*
-   Usuario u1(1234,"Antonio","miContra","correo@hotmail.com");
-   AdministradorUsuario aU1(6784,"Pedro","miContra2","correo@hotmail.com");
-   AdministradorMaquina aM1(352,"Martin","miContra3","correo@hotmail.com");
-*/
    return 0;
 }

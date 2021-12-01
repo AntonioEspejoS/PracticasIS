@@ -12,6 +12,7 @@ class AdministradorUsuario:public Usuario{
         AdministradorUsuario(int id,string nombre,string contra, string correo):Usuario(id,nombre,contra,correo){
             setTipoUsu(1);
         };  
+        void crearUsuario();
 };
 
 #endif

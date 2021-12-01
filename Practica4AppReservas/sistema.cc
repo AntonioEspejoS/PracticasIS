@@ -21,7 +21,7 @@ bool Sistema::iniciarSesion(int id,string contra,Usuario &usuarioSesion){
 			getline(fichero,correoF,',');
 			getline(fichero,tipoF,'\n');
 			tipoEntero=atoi(tipoF.c_str());
-			if(id==idEntero){
+			if(id==idEntero && contra==contraF){
 				usuarioSesion.setId(idEntero);
 				usuarioSesion.setNombre(nombreF);
 				usuarioSesion.setContra(contraF);
@@ -31,6 +31,8 @@ bool Sistema::iniciarSesion(int id,string contra,Usuario &usuarioSesion){
 			}
 		}
 
+	}else{
+	    cout<<"Error al leer el fichero";
 	}
 	fichero.close();
 	return false;

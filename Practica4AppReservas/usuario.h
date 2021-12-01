@@ -19,10 +19,11 @@ class Usuario{
         string getNombre(){return nombre_;};
         void setNombre(string nombre){nombre_=nombre;};
         int getId(){return id_;};
-	void setId(int id){id_=id;};
+	    void setId(int id){id_=id;};
         string getCorreo(){return correo_;};
         void setCorreo(string correo){correo_=correo;};
-	void setContra(string contra){contra_=contra;};
+	    void setContra(string contra){contra_=contra;};
+	    string getContra(){return contra_;};
         //int getLimiteTiempo(){return limiteTiempo_;};
         //vector<int> getLimiteRecursos(){return limiteRecursos_;};
         int getTipoUsu(){return tipoUsu_;};
