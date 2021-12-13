@@ -1,0 +1,2 @@
+123,Antonio Espejo,contra1,micorreo@hotmail.com,1
+456,Tamara Munoz,contra2,otrocorreo@hotmail.com,0
