@@ -1,0 +1,7 @@
+<testsuites>
+	<testsuite name="AllTests" tests="3">
+		<testcase classname="AllTests" name="TestIniciarSesionExiste"/>
+		<testcase classname="AllTests" name="TestIniciarSesionErrorContra"/>
+		<testcase classname="AllTests" name="TestIniciarNumeroMaquinasDisponibles"/>
+	</testsuite>
+</testsuites>
